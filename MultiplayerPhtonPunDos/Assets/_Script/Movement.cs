@@ -23,7 +23,7 @@ public class Movement : MonoBehaviourPunCallbacks
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
 
-            Vector3 displacement = new Vector3(moveHorizontal, 0, moveVertical) * velplayer * Time.deltaTime; //Time.deltatime, para que no se pase de los frames que pueda manejar el update
+            Vector3 displacement = new Vector3(-moveHorizontal, 0, moveVertical) * velplayer * Time.deltaTime; //Time.deltatime, para que no se pase de los frames que pueda manejar el update
             
             transform.Translate(displacement);
         }
